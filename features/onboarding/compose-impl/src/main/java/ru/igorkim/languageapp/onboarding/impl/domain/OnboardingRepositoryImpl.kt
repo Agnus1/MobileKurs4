@@ -8,7 +8,7 @@ class OnboardingRepositoryImpl(
     private val onboardingStorage: OnboardingStorage,
 ) : OnboardingRepository {
     override suspend fun getUnwatchedUnits(): List<OnboardingUnit> {
-        return OnboardingUnit.entries - getWatchedUnits()
+        return OnboardingUnit.entries
     }
 
     override suspend fun saveWatchedUnit(unit: OnboardingUnit) {
